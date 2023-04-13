@@ -22,6 +22,11 @@ Notes for c and w function:
         Create Directory -> To create directory give at second parameter (dir)
 
 
+---------------
+New versions will be aviable at releases. This is just version 1.1
+---------------
+
+
 Thanks for using
 
 Lukas
