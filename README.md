@@ -1,3 +1,7 @@
+---------------
+New versions will be aviable at releases. This is just version 1.1
+---------------
+
 Use this library as your own risiko:
     This library is created to combine the -shutil- module and the -os- module
     It's created for write on files, delete files, and read files
@@ -20,11 +24,6 @@ Notes for c and w function:
     c function to create file or folder:
         Create File -> To create file give just the name of file in c function
         Create Directory -> To create directory give at second parameter (dir)
-
-
----------------
-New versions will be aviable at releases. This is just version 1.1
----------------
 
 
 Thanks for using
