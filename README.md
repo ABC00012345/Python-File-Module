@@ -1,5 +1,5 @@
 ---------------
-New versions will be aviable at releases. This is just version 1.1
+Python-File-Module
 ---------------
 
 Use this library as your own risiko:
