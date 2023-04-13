@@ -5,7 +5,9 @@ Use this library as your own risiko:
 How to use:
     Download the full zip and extract it. Make sure your file.py is in same folder of the setup.
     The setup copies the file.py to the directory of your local python libs.
-    To use it just write in the beginning of your code: (import file)
+    To use it just write in the beginning of your code: (import file).
+    You can also make it manually. Copy file.py in your python libs. They are normally at: C:\Users\UserName\AppData\Local\Programs\Python\Python311\Lib
+    Linux and Mac setup will is coming...
 
 
 Notes for c and w function:
