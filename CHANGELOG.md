@@ -3,6 +3,10 @@ Python File Library
 -------------------
 Changelog:
 ----------
+    1.1.1:
+----------
+        Fixed Bugs in rd (read) function when giving not existing path. 
+----------
     1.1:
 ----------
         Add w (write) and c (create) to write on file or create one and create to create files and directories.
