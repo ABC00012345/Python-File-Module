@@ -19,10 +19,10 @@ def rm(file):
 
 
 def rd(file):
-     if not os.path.exists(file):
-         print("File not found!")
-         quit()
-     else:
+    if not os.path.exists(file):
+        print("File not found!")
+        quit()
+    else:
         if os.path.isdir(file):
             print("Can't read folder")
             quit()
