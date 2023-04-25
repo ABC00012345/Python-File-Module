@@ -1,5 +1,6 @@
 import shutil
 import os
+from time import strftime, localtime
 
 
 def rm(file):
@@ -50,6 +51,21 @@ def c(name, fileOrDir=""):
             f.close()
     elif fileOrDir == "dir":
         os.mkdir(name)
+
+def inf(file):
+    if not os.path.exists:
+        print("File or folder not found!")
+    else:
+        print("*****Informations*****")
+        if os.path.isfile(file):
+            print("Size of file: " + str(os.path.getsize(file)) + " bytes")
+        else:
+            ordnergroesse_bytes = sum(os.path.getsize(os.path.join(file, datei))
+                          for datei in os.listdir(file)
+                          if os.path.isfile(os.path.join(file, datei)))
+            print("Size of folder: " + str(ordnergroesse_bytes) + " bytes")
+        print("Last modified time: " + str(strftime('%Y-%m-%d %H:%M:%S', localtime(os.path.getmtime(file)))))
+        print("Creation time: " + str(strftime('%Y-%m-%d %H:%M:%S', localtime(os.path.getctime(file)))))
 
 if __name__ == "__main__":
     print("Please import the module from another file to use it!")
