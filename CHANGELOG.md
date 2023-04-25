@@ -6,7 +6,8 @@ Changelog:
     1.2:
 ----------
         Added information (inf) function to show the creation and last modified date and the size of given folder or file.
-        important: Added remove batch file. If you will delete the file module with oneclick you can easily use the batch file (remove.bat)
+        important: Added remove batch file. If you will delete the file module with oneclick you can easily use the batch file (remove.bat).
+        Changed something in LICENSE -> please read when using
         Thanks for using :)
 ----------
     1.1.1:
