@@ -3,6 +3,11 @@ Python File Library
 -------------------
 Changelog:
 ----------
+    1.2:
+----------
+        Added information (inf) function to show the creation and last modified date and the size of given folder or file.
+        Thanks for using :)
+----------
     1.1.1:
 ----------
         Fixed Bugs in rd (read) function when giving not existing path. 
