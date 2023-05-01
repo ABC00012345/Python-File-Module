@@ -1,4 +1,4 @@
-
+#!/bin/bash
 
 read -p "Do you really want to remove the it?" user_input
 
