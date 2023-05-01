@@ -1,6 +1,14 @@
 @echo off
 cls
 
+@echo off
+where python > nul 2>&1
+if %errorlevel% == 0 (
+) else (
+    echo Python is not installed!
+    exit
+)
+
 echo Do you want to start the setup. Make sure the file.py is in the same directory as the setup
 choice /c YN
 
