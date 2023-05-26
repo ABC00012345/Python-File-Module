@@ -3,6 +3,12 @@ Python File Library
 -------------------
 Changelog:
 ----------
+    1.3:
+----------
+    Added md5 function to calculate md5 of file.
+    Improve some worse code in the module.
+    Correct false informations in LICENSE.
+----------
     1.2:
 ----------
         Added information (inf) function to show the creation and last modified date and the size of given folder or file.
