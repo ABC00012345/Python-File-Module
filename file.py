@@ -1,30 +1,31 @@
-import shutil
-import os
+import shutil as __shutil
+import os as __os
 from time import strftime, localtime
+import hashlib as __hashlib
 
 
 def rm(file):
-    isFile = os.path.isfile(file)
-    isDir = os.path.isdir(file)
+    isFile = __os.path.isfile(file)
+    isDir = __os.path.isdir(file)
     if not isFile and not isDir:
         print("File or Directory not found!")
         quit()
     if isFile:
-        os.remove(file)
-        if not os.path.exists(file):
+        __os.remove(file)
+        if not __os.path.exists(file):
             print("File successfully deleted!")
     elif isDir:
-        shutil.rmtree(file)
-        if not os.path.exists(file):
+        __shutil.rmtree(file)
+        if not __os.path.exists(file):
             print("Directory successfully deleted!")
 
 
 def rd(file):
-    if not os.path.exists(file):
+    if not __os.path.exists(file):
         print("File not found!")
         quit()
     else:
-        if os.path.isdir(file):
+        if __os.path.isdir(file):
             print("Can't read folder")
             quit()
         with open(file) as f:
@@ -32,7 +33,7 @@ def rd(file):
 
 
 def w(file, content=""):
-    if os.path.isdir(file):
+    if __os.path.isdir(file):
         print("Can't write folder")
     else:
         with open(file, "w") as f:
@@ -50,22 +51,30 @@ def c(name, fileOrDir=""):
         with open(name, "w") as f:
             f.close()
     elif fileOrDir == "dir":
-        os.mkdir(name)
+        __os.mkdir(name)
 
 def inf(file):
-    if not os.path.exists:
+    if not __os.path.exists:
         print("File or folder not found!")
     else:
         print("*****Informations*****")
-        if os.path.isfile(file):
-            print("Size of file: " + str(os.path.getsize(file)) + " bytes")
+        if __os.path.isfile(file):
+            print("Size of file: " + str(__os.path.getsize(file)) + " bytes")
         else:
-            ordnergroesse_bytes = sum(os.path.getsize(os.path.join(file, datei))
-                          for datei in os.listdir(file)
-                          if os.path.isfile(os.path.join(file, datei)))
+            ordnergroesse_bytes = sum(__os.path.getsize(__os.path.join(file, datei))
+                          for datei in __os.listdir(file)
+                          if __os.path.isfile(__os.path.join(file, datei)))
             print("Size of folder: " + str(ordnergroesse_bytes) + " bytes")
-        print("Last modified time: " + str(strftime('%Y-%m-%d %H:%M:%S', localtime(os.path.getmtime(file)))))
-        print("Creation time: " + str(strftime('%Y-%m-%d %H:%M:%S', localtime(os.path.getctime(file)))))
+        print("Last modified time: " + str(strftime('%Y-%m-%d %H:%M:%S', localtime(__os.path.getmtime(file)))))
+        print("Creation time: " + str(strftime('%Y-%m-%d %H:%M:%S', localtime(__os.path.getctime(file)))))
+
+
+def md5(file):
+    with open(file,"rb") as f:
+        bytes = f.read() # read file as bytes
+        readable_hash = __hashlib.md5(bytes).hexdigest()
+        print(readable_hash)
+
 
 if __name__ == "__main__":
     print("Please import the module from another file to use it!")
