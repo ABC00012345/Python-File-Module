@@ -46,7 +46,6 @@ def w(file, content=""):
             print("Failed!")
             
 def c(name, fileOrDir=""):
-    print("You need this function only if you want to create a file without content. But this can also be do if you give in the 'w' write function one parameter. So this function is a additional feature! Note: You can also create a folder if you give as second parameter dir")
     if fileOrDir == "file" or fileOrDir == "":
         with open(name, "w") as f:
             f.close()
