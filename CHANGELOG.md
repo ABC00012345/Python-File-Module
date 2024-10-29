@@ -3,6 +3,12 @@ Python File Library
 -------------------
 Changelog:
 ----------
+    1.4:
+----------
+    Fixed md5 function to return md5 of file instead of printing it.
+    Fixed return value in many functions. They return now False or True if the function fail or success
+    Added .gitignore
+----------
     1.3:
 ----------
     Added md5 function to calculate md5 of file.
